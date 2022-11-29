@@ -16,5 +16,14 @@ export default class TicketService {
     
     // Calculate amount to pay and total number of tickets
     const ticketsData = ticketsAmountAndSeatData(...ticketTypeRequests)
+
+    // Create an instance of TicketPaymentService and make payment
+    const TicketPaymentServiceInstance = new TicketPaymentService();
+    TicketPaymentServiceInstance.makePayment(accountId, ticketsData.totalAmountToPay);
+
+    // Create an instance of SeatReservationService and reserve seats
+    const SeatReservationServiceInstance = new SeatReservationService();
+    SeatReservationServiceInstance.reserveSeat(accountId, ticketsData.totalTickets);
+
     }
     }
