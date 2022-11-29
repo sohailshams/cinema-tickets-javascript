@@ -13,5 +13,8 @@ export default class TicketService {
     // Create an instance of InvalidPurchaseException and validate ticketTypeRequests
     const InvalidPurchaseExceptionInstance = new InvalidPurchaseException();
     InvalidPurchaseExceptionInstance.validatePurchase(accountId, ...ticketTypeRequests);
+    
+    // Calculate amount to pay and total number of tickets
+    const ticketsData = ticketsAmountAndSeatData(...ticketTypeRequests)
     }
     }
