@@ -3,8 +3,6 @@ import { TICKETDATAOBJ, ADULTTICKETTYPE, CHILDTICKETTYPE, ADULTTICKETPRICE, CHIL
 export const ticketsAmountAndSeatData = function calculateAmountAndSeats(...ticketTypeRequests){    
     let amountToPay = 0; 
     let noOfTickets = 0;
-    
-    // let atleastOneAdultTicketFlag = false;
     const ticketTypeRequest =  [...ticketTypeRequests]
 
     // loop over ticketTypeRequests
